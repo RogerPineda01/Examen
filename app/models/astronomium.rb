@@ -1,0 +1,2 @@
+class Astronomium < ApplicationRecord
+end

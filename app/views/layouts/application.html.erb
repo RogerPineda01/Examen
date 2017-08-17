@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  
+ 
+  
+    <title>Astros</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+ 
+ 
+  <body  style="background-color:black;">
+
+
+
+	<%= yield %>
+	<br>  <br/>
+	<br>  <br/>
+	
+<!-- Example single danger button -->
+<div class="btn-group">
+  <button type="button" class="btn btn-danger dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Enlases de Sitios Web
+  </button>
+  <div class="dropdown-menu">
+    <a class="dropdown-item" href="http://www.astromia.com">1) Astronomia educativa</a>
+	<div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="https://www.muyinteresante.es/ciencia/fotos/10-curiosidades-sobre-galaxias/galaxias">2) Curiosidades de astronomia</a>
+	<div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="https://es.wikipedia.org/wiki/Universo">3) Conociendo el universo</a>
+    <div class="dropdown-divider"></div>
+    <a class="dropdown-item" href="https://www.cerebriti.com/juegos-de-astronom%C3%ADa/tag/mas-recientes/">4) Juega con la ciencia</a>
+  </div>
+</div>
+	
+  </body>
+</html>

@@ -1,0 +1,43 @@
+<%= form_with(model: astronomium, local: true) do |form| %>
+  <% if astronomium.errors.any? %>
+    <div id="error_explanation">
+      <h2><font color="white"><%= pluralize(astronomium.errors.count, "error") %> prohibited this astronomium from being saved:</font></h2>
+
+      <ul><font color="white">
+      <% astronomium.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+	  </font></div>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <font color="white">
+	<%= form.label :Galaxia %>
+    <%= form.text_field :Galaxia, id: :astronomium_Galaxia %>
+  </font></div>
+
+  <div class="field">
+  <font color="white">
+    <%= form.label :Planeta %>
+    <%= form.text_field :Planeta, id: :astronomium_Planeta %>
+  </font></div>
+
+  <div class="field">
+  <font color="white">
+<font color="white">    <%= form.label :Estrella %>
+    <%= form.text_field :Estrella, id: :astronomium_Estrella %>
+  </font></div>
+
+  <div class="field">
+  <font color="white">
+    <%= form.label :Luna %>
+    <%= form.text_field :Luna, id: :astronomium_Luna %>
+  </font></div>
+
+  <div class="actions">
+  <font color="white">
+    <%= form.submit %>
+  </font></div>
+<% end %>

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1><font color="white"> Astronomia </font></h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><font color="white">Galaxia</font></th>
+      <th><font color="white">Planeta</font></th>
+      <th><font color="white">Estrella</font></th>
+      <th><font color="white">Luna</font></th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @astronomia.each do |astronomium| %>
+      <tr>
+	  
+        <td><font size ="3", color ="#ffffff"><%= astronomium.Galaxia %></font></td>
+        <td><font size ="3", color ="#ffffff"><%= astronomium.Planeta %></font></td>
+        <td><font size ="3", color ="#ffffff"><%= astronomium.Estrella %></font></td>
+        <td><font size ="3", color ="#ffffff"><%= astronomium.Luna %></font></td>
+        <td><font size ="3", color ="#ffffff"><%= link_to 'Show', astronomium %></font></td>
+        <td><font size ="3", color ="#ffffff"><%= link_to 'Edit', edit_astronomium_path(astronomium) %></font></td>
+        <td><font size ="3", color ="#ffffff"><%= link_to 'Destroy', astronomium, method: :delete, data: { confirm: 'Are you sure?' } %></font></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Astronomium', new_astronomium_path %>

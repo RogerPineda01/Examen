@@ -1,0 +1,27 @@
+<%= form_with(model: universo, local: true) do |form| %>
+  <% if universo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(universo.errors.count, "error") %> prohibited this universo from being saved:</h2>
+
+      <ul>
+      <% universo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :Costelacion %>
+    <%= form.text_field :Costelacion, id: :universo_Costelacion %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Distancia %>
+    <%= form.text_field :Distancia, id: :universo_Distancia %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

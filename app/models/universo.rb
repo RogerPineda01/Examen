@@ -1,0 +1,2 @@
+class Universo < ApplicationRecord
+end
